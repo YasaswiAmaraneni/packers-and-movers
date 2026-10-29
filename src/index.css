@@ -1,0 +1,64 @@
+/* Base reset and global typography */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #ef4f30;
+  --primary-hover: #d83d1f;
+  --text-dark: #1f2428;
+  --text-body: #495057;
+  --text-muted: #6c757d;
+  --bg-light: #f8f9fa;
+  --bg-card: #ffffff;
+  --bg-accordion: #ebebeb;
+  --bg-accordion-hover: #e2e2e2;
+  --border-light: #e5e5e5;
+  --black-btn: #000000;
+  --black-btn-hover: #222222;
+  --font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-card);
+  color: var(--text-dark);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
